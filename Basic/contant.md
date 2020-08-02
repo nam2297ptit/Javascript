@@ -1,4 +1,3 @@
-
 ## Hằng số là gì
 
 Hằng số trong các ngôn ngữ lập trình là một biến giá trị không thay đổi. Trong bài này, chúng ta sẽ học cú pháp để khai báo một hằng số trong Java script.
@@ -31,7 +30,7 @@ Bạn có thể thay đổi các thuộc tính của một hằng số object:
 
 ```js
 // You can create a const object:
-const car = {type:"Fiat", model:"500", color:"white"};
+const car = { type: "Fiat", model: "500", color: "white" };
 
 // You can change a property:
 car.color = "red";
@@ -43,8 +42,8 @@ car.owner = "Johnson";
 Nhưng bạn không thể gán lại một hằng số object:
 
 ```js
-const car = {type:"Fiat", model:"500", color:"white"};
-car = {type:"Volvo", model:"EX60", color:"red"};    // ERROR
+const car = { type: "Fiat", model: "500", color: "white" };
+car = { type: "Volvo", model: "EX60", color: "red" }; // ERROR
 ```
 
 ### `Hằng số mảng có thể thay đổi`
@@ -66,5 +65,5 @@ Nhưng cũng không thể gán lại hằng số mảng:
 
 ```js
 const cars = ["Saab", "Volvo", "BMW"];
-cars = ["Toyota", "Volvo", "Audi"];    // ERROR
+cars = ["Toyota", "Volvo", "Audi"]; // ERROR
 ```

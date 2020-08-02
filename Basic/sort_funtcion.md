@@ -7,10 +7,11 @@ Ví dụ sắp xếp một mảng đơn giản:
 
 ```js
 fruits = ["Chuoi", "Cam", "Tao", "Xoai"];
-fruits.sort();      // Sắp xếp các phần tử trong mảng fruits[]
+fruits.sort(); // Sắp xếp các phần tử trong mảng fruits[]
 ```
 
 # Cách Sắp Xếp Mảng Đảo Ngược
+
 Phương thức reverse() đảo ngược các phần tử trong mảng – nó là ngược lại phương thức sort().
 
 Bạn có thể dùng nó để sắp xếp mảng theo chiều giảm dần.
@@ -19,8 +20,8 @@ Ví dụ
 
 ```js
 var fruits = ["Chuoi", "Cam", "Tao", "Xoai"];
-fruits.sort();        // First sort the elements of fruits 
-fruits.reverse();     // Then reverse the order of the elements
+fruits.sort(); // First sort the elements of fruits
+fruits.reverse(); // Then reverse the order of the elements
 ```
 
 ## Sắp xếp số
@@ -39,7 +40,9 @@ Ví dụ:
 
 ```js
 var points = [40, 100, 1, 5, 25, 10];
-points.sort(function(a, b){return a - b});
+points.sort(function (a, b) {
+  return a - b;
+});
 ```
 
 Thực hiện tương tự ở trên để sắp xếp mảng giảm dần.
@@ -48,7 +51,9 @@ Ví dụ:
 
 ```js
 var points = [40, 100, 1, 5, 25, 10];
-points.sort(function(a, b){return b - a});
+points.sort(function (a, b) {
+  return b - a;
+});
 ```
 
 Hàm So Sánh
@@ -71,7 +76,6 @@ Hàm so sánh tính toán 40-100 và trả về kết quả -60 (giá trị âm)
 Hàm sort dựa vào kết quả đó nhận biết 40 nhỏ hơn 100 và tiến hành sắp xếp.
 
 Bạn có thể dùng đoạn code sau để thử nghiệm với việc sắp xếp số và chữ:
-
 
 ```js
 <button onclick="myFunction1()">Sort Alphabetically</button>
@@ -99,7 +103,9 @@ Ví dụ về sắp xếp ngẫu nhiên:
 
 ```js
 var points = [40, 100, 1, 5, 25, 10];
-points.sort(function(a, b){return 0.5 - Math.random()});
+points.sort(function (a, b) {
+  return 0.5 - Math.random();
+});
 ```
 
 Tìm Giá Trị Lớn Nhất (Nhỏ Nhất) Của Mảng
@@ -111,7 +117,9 @@ Ví dụ về sắp xếp tăng dần:
 
 ```js
 var points = [40, 100, 1, 5, 25, 10];
-points.sort(function(a, b){return a - b});
+points.sort(function (a, b) {
+  return a - b;
+});
 // Lúc này, vị trí points[0] chứa giá trị nhỏ nhất.
 // và points[points.length-1] chứa giá trị lớn nhất.
 ```
@@ -120,7 +128,9 @@ Ví dụ về sắp xếp giảm dần:
 
 ```js
 var points = [40, 100, 1, 5, 25, 10];
-points.sort(function(a, b){return b - a});
+points.sort(function (a, b) {
+  return b - a;
+});
 // Lúc này, vị trí points[0] chứa giá trị lớn nhất.
 // và points[points.length-1] chứa giá trị nhỏ nhất.
 ```
@@ -135,7 +145,7 @@ Ví dụ:
 
 ```js
 function myArrayMax(arr) {
-    return Math.max.apply(null, arr);
+  return Math.max.apply(null, arr);
 }
 ```
 
@@ -146,7 +156,7 @@ Ví dụ:
 
 ```js
 function myArrayMin(arr) {
-    return Math.min.apply(null, arr);
+  return Math.min.apply(null, arr);
 }
 ```
 
@@ -161,14 +171,14 @@ Ví dụ hàm tìm Max:
 
 ```js
 function myArrayMax(arr) {
-    var len = arr.length
-    var max = -Infinity;
-    while (len--) {
-        if (arr[len] > max) {
-            max = arr[len];
-        }
+  var len = arr.length;
+  var max = -Infinity;
+  while (len--) {
+    if (arr[len] > max) {
+      max = arr[len];
     }
-    return max;
+  }
+  return max;
 }
 ```
 
@@ -178,14 +188,14 @@ Ví dụ hàm tìm Min:
 
 ```js
 function myArrayMin(arr) {
-    var len = arr.length
-    var min = Infinity;
-    while (len--) {
-        if (arr[len] < min) {
-            min = arr[len];
-        }
+  var len = arr.length;
+  var min = Infinity;
+  while (len--) {
+    if (arr[len] < min) {
+      min = arr[len];
     }
-    return min;
+  }
+  return min;
 }
 ```
 
@@ -196,9 +206,10 @@ Ví dụ:
 
 ```js
 var cars = [
-{type:"Volvo", year:2016},
-{type:"Saab", year:2001},
-{type:"BMW", year:2010}];
+  { type: "Volvo", year: 2016 },
+  { type: "Saab", year: 2001 },
+  { type: "BMW", year: 2010 },
+];
 ```
 
 Ngay cả khi các đối đượng có nhiều thuộc tính và kiểu dữ liệu của chúng khác nhau thì phương thức `sort()` vẫn có thể sử dụng để sắp xếp mảng đó.
@@ -214,11 +225,15 @@ So sánh các thuộc tính của chuỗi thì phức tạp hơn một chút.
 Ví dụ về so sánh chuỗi chứa cả chữ hoa và chữ thường:
 
 ```js
-cars.sort(function(a, b){
-    var x = a.type.toLowerCase();
-    var y = b.type.toLowerCase();
-    if (x < y) {return -1;}
-    if (x > y) {return 1;}
-    return 0;
+cars.sort(function (a, b) {
+  var x = a.type.toLowerCase();
+  var y = b.type.toLowerCase();
+  if (x < y) {
+    return -1;
+  }
+  if (x > y) {
+    return 1;
+  }
+  return 0;
 });
 ```

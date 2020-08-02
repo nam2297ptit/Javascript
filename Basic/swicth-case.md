@@ -3,25 +3,23 @@
 Bạn có thể dùng nhiều lệnh if...else…if , như đã cung cấp ở phần trước, để thực hiện 1 nhánh với nhiều lối đi. Tuy nhiên điều đó không phải là giải pháp tốt nhất, đặc biệt là khi tất cả các nhánh phụ thuộc vào giá trị của một biến duy nhất.
 
 ```js
-
-if(x == 5){
+if (x == 5) {
   //do something
 } else if (x == 7) {
   //do something else
 } else if (x == 12) {
   //do something different
-} else if (x = 50) {
+} else if ((x = 50)) {
   //do something yet more different
 } else {
   //do something completely different
 }
-
 ```
 
 Tuy nhiên ở đây mỗi trường hợp xác định bằng một lệnh điều kiện, bạn có thể sử dụng lệnh switch...case, lệnh mà dễ đọc và hiểu hơn.
 
 ```js
-switch(x){
+switch (x) {
   case 5:
     //do something
     break;
@@ -35,7 +33,7 @@ switch(x){
     //do something yet more different
     break;
   default:
-    //do something completely different
+  //do something completely different
 }
 ```
 
@@ -44,23 +42,23 @@ Kiểu của biểu thức là trả về giá trị của biến x có thể m�
 Chúng ta hãy nhìn vào phương thức cho thấy lợi ích của lệnh switch:
 
 ```js
-switch(n + 1){
-    case 1:
-      console.log("case 1: " + n);
-      break;
-    case 2:
-      console.log("case 2: " + n);
-      break;
-    default:
-      console.log("default: " + n);
-      break;
+switch (n + 1) {
+  case 1:
+    console.log("case 1: " + n);
+    break;
+  case 2:
+    console.log("case 2: " + n);
+    break;
+  default:
+    console.log("default: " + n);
+    break;
 }
 ```
 
-Và như mệnh đề else trong lệnh if, mệnh đề default không bắt buộc trong lệnh switch nếu nó không cần thiết cho logic chương trình: 
+Và như mệnh đề else trong lệnh if, mệnh đề default không bắt buộc trong lệnh switch nếu nó không cần thiết cho logic chương trình:
 
 ```js
-switch(n + 1){
+switch (n + 1) {
   case 1:
     console.log("case 1: " + n);
     break;
@@ -81,14 +79,14 @@ Vi dụ:
 
 ```js
 switch (expr) {
-  case 'Oranges':
-    console.log('Oranges are $0.59 a pound.');
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
     break;
-  case 'Apples':
-  case 'Papayas':
-    console.log('Apples and Papayas are $2.79 a pound.');
+  case "Apples":
+  case "Papayas":
+    console.log("Apples and Papayas are $2.79 a pound.");
     break;
   default:
-    console.log('Sorry, we are out of ' + expr + '.');
+    console.log("Sorry, we are out of " + expr + ".");
 }
 ```

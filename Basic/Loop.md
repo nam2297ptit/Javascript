@@ -1,12 +1,11 @@
-
 ## Vòng lặp for
 
 Vòng lặp JavaScript cho vòng lặp lặp lại các phần tử cho số lần cố định. Nó nên được sử dụng nếu số lần lặp được biết đến. Cú pháp của vòng lặp for được đưa ra dưới đây.
 
 ```js
-for (initialization; condition; increment)  
-{  
-    code to be executed  
+for (initialization; condition; increment)
+{
+    code to be executed
 }
 // Example:
 for (i = 0; i < 10; i++) {
@@ -21,7 +20,7 @@ Trong ví dụ trên, Bạn có thể thấy:
 - Condition: Xác định điều kiến cho vòng lặp chạy (i phải nhỏ hơn 10).
 
 - Increment: Tăng giá trị (i++) sau mỗi lần đoạn code trong vòng lặp được thực hiện.
- 
+
 ### `Initialization`
 
 Thông thường bạn sẽ sử dụng câu lệnh initialization để khởi tạo biến được sử dụng trong vòng lặp (i = 0).
@@ -33,7 +32,7 @@ Bạn có thể bắt đầu nhiều giá trị trong initialization (được p
 Ví dụ:
 
 ```js
-for (i = 0, len = 10, text = ""; i < len; i++) { 
+for (i = 0, len = 10, text = ""; i < len; i++) {
   text += i + " - ";
 }
 ```
@@ -44,7 +43,7 @@ Và bạn có thể bỏ qua phần initialization (như khi giá trị của b�
 var i = 2;
 var len = 10;
 var text = "";
-for (; i < len; i++) { 
+for (; i < len; i++) {
   text += i + " - ";
 }
 ```
@@ -70,19 +69,20 @@ Vi dụ:
 ```js
 var i = 0;
 var len = 10;
-for (; i < len; ) { 
+for (; i < len; ) {
   text += i + " - ";
   i++;
 }
 ```
 
 ### `Sử dụng for cho một string`
+
 Bạn có thể sử dụng for loop cho 1 string
 
 ```js
 var str = "javascript";
 for (i = 0; i < str.length; i++) {
-	console.log(str[i]);
+  console.log(str[i]);
 }
 // output:
 // j
@@ -102,7 +102,7 @@ for (i = 0; i < str.length; i++) {
 Lệnh `while` xử lí 1 biểu thức điều kiện và 1 khối lệnh được lặp lại cho đến khi giá trị của biểu thức cho ra giá trị `false`:
 
 ```js
-while (condition){
+while (condition) {
   //do something
 }
 ```
@@ -116,8 +116,8 @@ Chúng ta hãy xem một vài ví dụ. Vòng lặp dưới đây xử lí lện
 
 ```js
 var i = 0;
-while(i++ < 5){
-  console.log(i + " ");   //prints: 1 2 3 4 5
+while (i++ < 5) {
+  console.log(i + " "); //prints: 1 2 3 4 5
 }
 ```
 
@@ -125,7 +125,7 @@ Và ở đây là 1 ví dụ về gọi 1 phương thức mà trả về mỗi v
 
 ```js
 var result = 0;
-while (result < 1){
+while (result < 1) {
   result += 0.1;
 }
 ```
@@ -136,7 +136,7 @@ Cộng dần `0.1` vào biến result cho tới khi biểu thức điều kiện
 
 ```js
 var result = 0;
-while ((result += 0.1) < 1){
+while ((result += 0.1) < 1) {
   console.log(result);
 }
 ```
@@ -150,7 +150,7 @@ Tương tự như lệnh `while`, lệnh `do...while` xử lí 1 biểu thức �
 ```js
 do {
   //statement or block
-} while (condition)
+} while (condition);
 ```
 
 Tuy nhiên nó xử lí khối lệnh một lần trước khi biểu thức điều kiện được kiểm tra, nghĩa là khối lệnh đó sẽ được xử lí ít nhất 1 lần.
@@ -160,8 +160,8 @@ Chúng ta hãy xem một số ví dụ. Mã lệnh sau xử lí lệnh in 6 lầ
 ```js
 var i = 0;
 do {
-  console.log(i + " ");   //prints: 0 1 2 3 4 5
-} while(i++ < 5);
+  console.log(i + " "); //prints: 0 1 2 3 4 5
+} while (i++ < 5);
 ```
 
 Trong khi mã lệnh sau vận hành một cách tương tự như một lệnh `while`:
@@ -173,6 +173,7 @@ do {
   console.log(result);
 } while (result < 1);
 ```
+
 Điều này là vì giá trị được in sau khi nó được cộng dồn, và sau đó biểu thức điều kiện được kiểm tra trước khi đi vào khối lệnh xử lí lần nữa.
 
 Lệnh do...while rút gọn vận hành một cách khác. Ở đây là một ví dụ:
@@ -184,5 +185,4 @@ do {
 } while ((result += 0.1) < 1);
 ```
 
-Giá trị ban đầu của biến `result` luôn được in đầu tiên bởi lệnh được xử lí ít nhất một lần trước khi biểu thức điều kiện được kiểm tra lần đầu. 
-
+Giá trị ban đầu của biến `result` luôn được in đầu tiên bởi lệnh được xử lí ít nhất một lần trước khi biểu thức điều kiện được kiểm tra lần đầu.
