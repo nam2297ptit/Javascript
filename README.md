@@ -1,2 +1,3 @@
-# Javascript_Basic
+# Javascript
+
 Theory Javascript Basic
