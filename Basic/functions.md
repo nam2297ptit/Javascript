@@ -8,6 +8,29 @@ Function (Hàm) là một nhóm các câu lệnh thực hiện các nhiệm vụ
 
 3. Functions giúp dễ dàng hơn để loại bỏ các lỗi — Khi chương trình được chia thành các function, nếu có lỗi xảy ra, bạn biết chính xác function nào gây ra lỗi và tìm nó ở đâu. Do đó, sửa lỗi trở nên dễ dàng hơn nhiều
 
+## Các loại functions
+
+Có 3 loại funtions:
+
+- Declaration function
+- Expression function
+- Arrow fimction
+
+Ví dụ cụ thể
+
+```js
+// Declaration function
+
+function Myfunction() {}
+
+// Expression function
+
+var Myfunction = function () {};
+
+// Arrow function
+() => {};
+```
+
 ## Khai báo và gọi một function
 
 Khởi tạo 1 function bắt đầu với từ khóa function, tiếp theo đó là tên mà function mà bạn muốn tạo, tiếp theo là ngoặc đơn () và cuối cùng là nơi cách lệnh của function giữa các dấu ngoặc nhọn {}.
